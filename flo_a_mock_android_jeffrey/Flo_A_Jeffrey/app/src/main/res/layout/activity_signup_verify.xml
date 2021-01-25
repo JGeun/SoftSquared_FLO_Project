@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/whiteForBackground">
+
+    <TextView
+        android:id="@+id/verify_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/verify_title"
+        android:textColor="@color/blackForText"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/verify_iv_back"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <RelativeLayout
+        android:id="@+id/verify_rl_userName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/verify_tv_title">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/verify_tl_userName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorTextAppearance="@style/error_apperance">
+
+            <EditText
+                android:id="@+id/verify_et_userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/verify_name"
+                android:paddingBottom="20dp"
+                android:backgroundTint="@color/black"
+                android:inputType="text"
+                android:maxLines="1"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <ImageView
+            android:id="@+id/verify_iv_userName_clear"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_text_clear"
+            android:visibility="invisible"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/verify_rl_phoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/verify_rl_userName">
+
+        <EditText
+            android:id="@+id/verify_et_userPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="@string/verify_phoneNumber"
+            android:inputType="phone"
+            android:ems="10"
+            android:paddingBottom="26dp"
+            android:backgroundTint="@color/black"
+            android:maxLines="1"/>
+
+        <Button
+            android:id="@+id/verify_btn_sendSMS"
+            android:layout_width="90dp"
+            android:layout_height="27dp"
+            android:layout_marginBottom="15dp"
+            android:text="@string/verify_sendSMS"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:background="@drawable/verify_btn_sendsms_background"
+            android:enabled="false"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"/>
+
+        <ImageView
+            android:id="@+id/verify_iv_number_clear"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_marginBottom="25dp"
+            android:src="@drawable/ic_text_clear"
+            android:layout_marginEnd="20dp"
+            android:layout_toStartOf="@+id/verify_btn_sendSMS"
+            android:layout_marginTop="16dp"
+            android:visibility="invisible"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/verify_rl_receiveSMSCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/verify_rl_phoneNumber">
+
+        <EditText
+            android:id="@+id/verify_et_smsCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/verify_smsCode"
+            android:paddingBottom="20dp"
+            android:backgroundTint="@color/black"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/verify_btn_successVerification"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/verify_successVerification"
+        android:textColor="@color/white"
+        android:background = "@drawable/verify_btn_success_background"
+        android:padding="10dp"
+        android:enabled="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="5dp"/>
+
+    <Button
+        android:id="@+id/verify_btn_resend_anim"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="@string/verify_btn_anim"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="invisible" />
+</androidx.constraintlayout.widget.ConstraintLayout>

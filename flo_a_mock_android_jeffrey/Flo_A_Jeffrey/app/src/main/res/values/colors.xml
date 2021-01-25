@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#3F3FFF</color>
+
+    <!-- 기본 -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray">#777777</color>
+    <color name="lightgray">#999999</color>
+    <color name="whiteForBackground">#FDFDFD</color>
+    <color name="blackForText">#4a4a4a</color>
+    <color name="redForText">#d9534f</color>
+    <color name="navigationBar">#F2F2F2</color>
+    <color name="mainBottomSongPlayerBackground">#151515</color>
+    <color name="mainSongPlayerTextColor">#656565</color>
+    <color name="mainStatusBarColor">#1AFFFFFF</color>
+
+    <!-- Setting -->
+    <color name="settingLineColor">#EBEBEB</color>
+
+    <!-- Browse -->
+    <color name="browseBackground">#FBFBFB</color>
+
+    <!-- SelectTaste -->
+    <color name="selectTasteBtnTag">#3E3CFF</color>
+    <color name="selectTasteBtnColor">#F3F3F3</color>
+    <color name="selectTasteBtnTransColor">#CC3E3CFF</color>
+
+    <!-- MusicPlayer -->
+    <color name="musicPlayerBackgroundColor">#0E0E0E</color>
+    <color name="musicSongArtistTextColor">#999999</color>
+    <color name="musicPlayerSeekBarBackground">#2D2D2D</color>
+    <color name="musicPlayerBtnBackground">#333333</color>
+
+    <!-- RecommendMusicActivity -->
+    <color name="recommendMusicBackground">#1A000000</color>
+    <color name="recommendMusicBottomBackground">#212224</color>
+    <color name="recommendMusicBottomBtnStrokeColor">#434446</color>
+    <color name="recommendMusicTextColor">#BBBCBE</color>
+
+    <!-- MusicList -->
+    <color name="musicListBottomColor">#141414</color>
+    <color name="musicListCloseGroupColor">#565656</color>
+
+    <!-- MusicSetting -->
+    <color name="musicSettingBottom">#B3212224</color>
+
+    <!-- Browse -->
+    <color name="browseBtnTag">#3E3CFF</color>
+    <color name="floForText">#4648C0</color>
+    <color name="floForBtnColor">#3F3FFF</color>
+    <color name="floForBtnDisbledColor">#E2E3E7</color>
+    <color name="floForBtnDisabledTextColor">#7172FF</color>
+    <color name="sktLoginBtnColor">#333333</color>
+    <color name="naverLoginBtnColor">#1DC800</color>
+    <color name="kakaoLoginBtnColor">#FAE101</color>
+    <color name="appleLoginBtnColor">#000000</color>
+
+    <!-- Storage -->
+    <color name="tabLayoutLineColor">#F0F0F0</color>
+    <color name="cardViewColor">#F3F3F3</color>
+
+    <!-- SearchMusic -->
+    <color name="searchMusicEditBackground">#F5F5F5</color>
+
+
+    <!-- addMusicList -->
+    <color name="addMusicListSelected">#EDEDED</color>
+</resources>

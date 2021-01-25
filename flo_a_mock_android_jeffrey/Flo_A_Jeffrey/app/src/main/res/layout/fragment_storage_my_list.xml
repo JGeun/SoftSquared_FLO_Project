@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp">
+
+    <RelativeLayout
+        android:id="@+id/myList_rl_editList"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/myList_editList"
+            android:textColor="@color/black"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/addFolder_ll_makeFolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/cardViewColor"
+            app:cardCornerRadius="10dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_storage_add_folder"
+                android:layout_gravity="center"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/storage_make_new_list"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/cardViewColor"
+            app:cardCornerRadius="10dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_storage_capture"
+                android:layout_gravity="center"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/storage_capture_image"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/storage_capture_image_msg"
+                android:textSize="12sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/myList_showNoList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/storage_list_msg1"
+            android:textSize="15sp"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/storage_list_msg2"
+            android:textSize="15sp"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/myList_rv_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>

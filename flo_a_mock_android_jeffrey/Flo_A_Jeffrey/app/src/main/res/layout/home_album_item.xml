@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingEnd="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            app:cardCornerRadius="5dp">
+
+            <ImageView
+                android:id="@+id/home_rv_item_album"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/main_audio_image"
+                android:scaleType="fitXY"/>
+
+            <ImageView
+                android:id="@+id/home_rv_item_play"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_home_album_play"
+                android:layout_gravity="bottom|end"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"/>
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/home_rv_item_title"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        android:text="@string/home_rv_item_title"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:maxLines="2"
+        android:ellipsize="end"/>
+
+    <TextView
+        android:id="@+id/home_rv_item_singer"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/home_rv_item_singer"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+</LinearLayout>

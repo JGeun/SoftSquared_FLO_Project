@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <com.amar.library.ui.StickyScrollView
+        android:id="@+id/search_sticky_sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:stickyHeader="@+id/titleLayout"
+        android:paddingBottom="5dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/search_rl_topPanel"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/main_search_title"
+                    android:textColor="@color/blackForText"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"/>
+
+                <ImageView
+                    android:id="@+id/search_iv_note"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_note"
+                    android:background="@null"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+
+                <ImageView
+                    android:id="@+id/search_iv_mike"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_mike"
+                    android:background="@null"
+                    android:layout_marginTop="7dp"
+                    android:layout_toLeftOf="@id/search_iv_note"
+                    android:layout_marginRight="10dp"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/titleLayout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/searchMusicEditBackground"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp">
+
+                    <ImageView
+                        android:id="@+id/search_iv_search"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@null"
+                        android:src="@drawable/ic_search_music_find"
+                        android:layout_marginTop="6dp"
+                        android:layout_centerVertical="true"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/search_hint"
+                        android:background="@null"
+                        android:layout_toEndOf="@+id/search_iv_search"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/search_riseMusic"
+                    android:textSize="22sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/search_date_time"
+                    android:textSize="12sp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/search_rv_musicChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </com.amar.library.ui.StickyScrollView>
+
+
+
+</LinearLayout>

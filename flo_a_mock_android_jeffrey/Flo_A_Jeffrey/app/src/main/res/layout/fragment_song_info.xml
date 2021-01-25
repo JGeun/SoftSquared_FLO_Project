@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp">
+
+        <ImageView
+            android:id="@+id/songInfo_iv_exit"
+            android:layout_width="17dp"
+            android:layout_height="25dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_setting_exit" />
+
+
+        <ImageView
+            android:id="@+id/songInfo_iv_setting"
+            android:layout_width="20dp"
+            android:layout_height="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_song_info_setting" />
+
+        <ImageView
+            android:id="@+id/songInfo_iv_heart"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:layout_toStartOf="@id/songInfo_iv_setting"
+            android:src="@drawable/ic_song_info_heart" />
+    </RelativeLayout>
+
+    <com.amar.library.ui.StickyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:stickyHeader="@id/sticky_header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/ic_song_info_album_image" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/songInfo_musicTitle"
+                        android:textColor="@color/black"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/songInfo_musicSinger"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="15dp"
+                            android:layout_marginStart="3dp"
+                            android:src="@drawable/ic_browse_title_right" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/songInfo_musicTitle"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="26dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_song_info_play" />
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="1dp"
+                            android:src="@drawable/ic_song_info_add_list" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sticky_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="50dp"
+                            android:gravity="center"
+                            android:text="@string/songInfo_tab_detail"
+                            android:textColor="@color/floForBtnColor"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:text="@string/songInfo_tab_similar"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="50dp"
+                            android:gravity="center"
+                            android:text="@string/songInfo_tab_video"
+                            android:textColor="@color/black" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="65dp"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="45dp"
+                    android:background="@color/floForBtnColor" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/tabLayoutLineColor" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/songInfo_songTitleMsg"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/songInfo_musicTitle" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/songInfo_lyricsWriterMsg"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/songInfo_lyricsWriter" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/songInfo_songWriterMsg"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/songInfo_songWriter" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/songInfo_editSongMsg"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/songInfo_songEditor" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/songInfo_tv_lyrics"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:lineSpacingExtra="3dp"
+                    android:text="Lyrics Test" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </com.amar.library.ui.StickyScrollView>
+</LinearLayout>

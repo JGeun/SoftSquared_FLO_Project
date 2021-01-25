@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/recommendMusicBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:background="@color/recommendMusicBottomBackground"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:paddingTop="5dp">>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:paddingTop="15dp">
+
+            <TextView
+                android:id="@+id/musicSetting_musicTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="@string/musicSetting_title"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="30dp"
+                android:text="@string/musicSetting_singer"
+                android:textColor="@color/floForBtnDisbledColor" />
+
+            <ImageView
+                android:id="@+id/musicSetting_iv_exit"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_clear_white" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:paddingTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/musicSetting_ll_songInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_music_setting_song_info" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/musicSetting_songInfo"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_marginTop="10dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_music_setting_album_info" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/musicSetting_albumInfo"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_marginTop="10dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_music_setting_artist_info" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/musicSetting_artistInfo"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_marginTop="10dp">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_music_setting_put_storage" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/musicSetting_putStorage"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_marginTop="10dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_music_setting_song_info_more" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/musicSetting_songInfoMore"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_marginTop="10dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_music_setting_download" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/musicSetting_downLoad"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_marginTop="10dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_music_setting_share_story" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/musicSetting_shareStory"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_marginTop="10dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_music_setting_share_link" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/musicSetting_shareLink"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/musicSetting_ll_delete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_marginTop="10dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_music_setting_delete" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/musicSetting_delete"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="30dp"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:background="@color/musicSettingBottom"/>-->
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

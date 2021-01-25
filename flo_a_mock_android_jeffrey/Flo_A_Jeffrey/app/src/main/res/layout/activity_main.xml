@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".src.main.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/main_rl_musicPlayerTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/main_btm_nav"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <LinearLayout
+            android:id="@+id/main_ll_musicPlayer_noMusic"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/mainBottomSongPlayerBackground"
+            android:orientation="horizontal"
+            android:paddingStart="15dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="10dp"
+            android:visibility="invisible"
+            android:weightSum="10">
+
+            <RelativeLayout
+                android:id="@+id/main_rl_musicPlayer_noMusic"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="9"
+                android:layout_marginTop="3dp">
+
+                <TextView
+                    android:id="@+id/main_tv_songTitle_noMusic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/main_songTitle"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/mainSongPlayerTextColor"/>
+
+                <ImageView
+                    android:id="@+id/main_iv_song_right_noMusic"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/main_ic_music_right_no_song" />
+
+                <ImageView
+                    android:id="@+id/main_iv_song_play_noMusic"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="15dp"
+                    android:layout_toStartOf="@+id/main_iv_song_right_noMusic"
+                    android:src="@drawable/main_ic_music_play_no_song" />
+
+                <ImageView
+                    android:id="@+id/main_iv_song_left_noMusic"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toLeftOf="@+id/main_iv_song_play_noMusic"
+                    android:src="@drawable/main_ic_music_left_no_song" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/main_rl_songList_noMusic"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/main_iv_song_list_noMusic"
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/main_ic_music_list_no_song" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/main_ll_musicPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/mainBottomSongPlayerBackground"
+            android:orientation="horizontal"
+            android:paddingStart="15dp"
+            android:paddingTop="10dp"
+            android:visibility="visible"
+            android:weightSum="10">
+
+            <RelativeLayout
+                android:id="@+id/main_rl_musicPlayer_Info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5">
+
+                <LinearLayout
+                    android:id="@+id/main_ll_songInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/main_tv_songTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLength="15"
+                        android:text="songTitle"
+                        android:maxLines="1"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/main_tv_artistName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="artist"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:textColor="@color/musicSongArtistTextColor"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/main_rl_musicPlayer_system"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:layout_marginTop="7dp"
+                android:paddingEnd="10dp">
+
+                <ImageView
+                    android:id="@+id/main_iv_song_right"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/ic_music_list_right" />
+
+                <ImageView
+                    android:id="@+id/main_iv_song_play"
+                    android:layout_width="40dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toLeftOf="@+id/main_iv_song_right"
+                    android:src="@drawable/ic_music_list_play"
+                    android:tag="1" />
+
+                <ImageView
+                    android:id="@+id/main_iv_song_left"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@+id/main_iv_song_play"
+                    android:src="@drawable/ic_music_list_left" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/main_rl_songList"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/main_iv_song_list"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:paddingEnd="18dp"
+                    android:paddingBottom="5dp"
+                    android:src="@drawable/ic_main_music_player_song_list" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/main_btm_nav"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/black"
+        app:itemBackground="@color/black"
+        app:itemIconTint="@drawable/main_btm_nav_item_color"
+        app:itemTextColor="@drawable/main_btm_nav_item_color"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/menu_main_bottom_nav" />
+
+    <FrameLayout
+        android:id="@+id/main_frm"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/main_rl_musicPlayerTotal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

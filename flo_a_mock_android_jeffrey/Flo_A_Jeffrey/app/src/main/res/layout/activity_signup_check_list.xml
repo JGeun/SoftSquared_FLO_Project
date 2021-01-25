@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/whiteForBackground">
+
+    <TextView
+        android:id="@+id/checkList_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/checkList_title"
+        android:textColor="@color/blackForText"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/checkList_iv_back"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkList_tv_title"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_marginTop="40dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/checkList_rb1"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="3dp"
+                android:button="@android:color/transparent"
+                android:background="@drawable/radiobutton_background" />
+
+            <TextView
+                android:id="@+id/checkList_tv_essential1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/checkList_essential"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/checkList_rb1"
+                android:layout_marginEnd="3dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/checkList_title"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/checkList_tv_essential1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:text="@string/checkList_detail"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <RadioButton
+                android:id="@+id/checkList_rb2"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="3dp"
+                android:button="@android:color/transparent"
+                android:background="@drawable/radiobutton_background" />
+
+            <TextView
+                android:id="@+id/checkList_tv_essential2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/checkList_essential"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/checkList_rb2"
+                android:layout_marginEnd="3dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/checkList_message1"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/checkList_tv_essential2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:text="@string/checkList_detail"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <RadioButton
+                android:id="@+id/checkList_rb3"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="3dp"
+                android:button="@android:color/transparent"
+                android:background="@drawable/radiobutton_background" />
+
+            <TextView
+                android:id="@+id/checkList_tv_essential3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/checkList_essential"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/checkList_rb3"
+                android:layout_marginEnd="3dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/checkList_message2"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/checkList_tv_essential3"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:text="@string/checkList_detail"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <RadioButton
+                android:id="@+id/checkList_rb4"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="3dp"
+                android:button="@android:color/transparent"
+                android:background="@drawable/radiobutton_background" />/>
+
+            <TextView
+                android:id="@+id/checkList_tv_select1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/checkList_select"
+                android:textSize="16sp"
+                android:textColor="@color/floForText"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/checkList_rb4"
+                android:layout_marginEnd="3dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/checkList_message3"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/checkList_tv_select1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:text="@string/checkList_detail"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <RadioButton
+                android:id="@+id/checkList_rb5"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="3dp"
+                android:button="@android:color/transparent"
+                android:background="@drawable/radiobutton_background"/>
+
+            <TextView
+                android:id="@+id/checkList_tv_select2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/checkList_select"
+                android:textSize="16sp"
+                android:textColor="@color/floForText"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/checkList_rb5"
+                android:layout_marginEnd="3dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/checkList_message4"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/checkList_tv_select2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:text="@string/checkList_detail"/>
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/blackForText"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="30dp">
+
+            <RadioButton
+                android:id="@+id/checkList_rb_all"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_marginEnd="5dp"
+                android:button="@android:color/transparent"
+                android:background="@drawable/radiobutton_background" />/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/checkList_selectAll"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/checkList_select"
+                        android:textColor="@color/floForText"
+                        android:textSize="13sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/checkList_selectAll_message"
+                        android:textSize="13sp"
+                        android:layout_marginStart="5dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/checkList_btn_nextActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/checkList_next"
+        android:enabled="false"
+        android:padding="20dp"
+        android:textColor="@color/floForBtnDisabledTextColor"
+        android:backgroundTint="@color/floForBtnColor"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

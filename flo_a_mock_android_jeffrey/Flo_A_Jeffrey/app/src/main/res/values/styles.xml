@@ -1,0 +1,79 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/blackForText</item>
+        <item name="colorControlActivated">@color/black</item>
+<!--        &lt;!&ndash;Status Bar 배경색&ndash;&gt;-->
+<!--        <item name="android:statusBarColor">@color/white</item>-->
+<!--        &lt;!&ndash;Status Bar 글자색깔&ndash;&gt;-->
+<!--        <item name="android:windowLightStatusBar">true</item>-->
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <!--<item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>-->
+    </style>
+    
+    <style name="AppTheme.NoTestActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="AppTheme.MusicPlayerNoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <!--<item name="android:statusBarColor">@android:color/transparent</item>
+
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>-->
+    </style>
+    <style name="Transparent" parent="@style/Theme.AppCompat">
+        <!--Titlebar 없애는 옵션
+            true : Titlebar x
+            false : Titlebar o
+        -->
+        <item name="windowNoTitle">true</item>
+        <!-- 투명정도를 나타내는 색-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <!--
+        android:backgroundDimEnabled
+        true - 반투명 검정 /  false - 완전 투명
+        -->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="tab_text" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:textSize">15sp</item>
+        <item name="fontStyle">normal</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="error_apperance" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/redForText</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="error_apperance_red" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/redForText</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="error_apperance_black" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+</resources>

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/userInfoSetting_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/userInfoSetting_title"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/userInfoSetting_iv_exit"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_setting_exit"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/userInfoSetting_title">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:id="@+id/userInfoSetting_ll_userInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setting_user_email"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/userInfoSetting_tv_ticket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/setting_ticket"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/setting_btn_userInfo"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:text="@string/userInfoSetting_buyTicket"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/setting_btn_bottompanel_background"
+                android:textColor="@color/floForBtnColor"
+                android:layout_alignBottom="@id/userInfoSetting_ll_userInfo"/>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/userInfoSetting_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/settingLineColor"
+            android:layout_marginTop="25dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/userInfoSetting_changeNumber"
+                    android:textSize="15sp"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_setting_rightarrow" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/userInfoSetting_OTP"
+                    android:textSize="15sp"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_setting_rightarrow" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+
+                <LinearLayout
+                    android:id="@+id/userInfoSetting_ll_verifyUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/userInfoSetting_verifyUser"
+                        android:textSize="15sp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/userInfoSetting_verifyUser_msg"
+                        android:layout_marginTop="2dp"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+
+
+                <Button
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:text="@string/userInfoSetting_btn_verify"
+                    android:textColor="@color/floForBtnColor"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignBaseline="@id/userInfoSetting_ll_verifyUser"
+                    android:background="@drawable/setting_btn_bottompanel_background" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp">
+
+                <LinearLayout
+                    android:id="@+id/userInfoSetting_ll_verifySKT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/userInfoSetting_verifySKT"
+                        android:textSize="15sp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/userInfoSetting_verifySKT_msg"
+                        android:layout_marginTop="2dp"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:text="@string/userInfoSetting_btn_verify"
+                    android:textColor="@color/floForBtnColor"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignBaseline="@id/userInfoSetting_ll_verifySKT"
+                    android:background="@drawable/setting_btn_bottompanel_background" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp">
+
+                <LinearLayout
+                    android:id="@+id/userInfoSetting_ll_verifyAdult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/userInfoSetting_verifyAdult"
+                        android:textSize="15sp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/userInfoSetting_verifyAdult_msg1"
+                        android:layout_marginTop="2dp"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/userInfoSetting_verifyAdult_msg2"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:text="@string/userInfoSetting_btn_verify"
+                    android:textColor="@color/floForBtnColor"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignBaseline="@id/userInfoSetting_ll_verifyAdult"
+                    android:background="@drawable/setting_btn_bottompanel_background" />
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/userInfoSetting_rl_logout"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/userInfoSetting_logout"
+                    android:textSize="16sp"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_setting_rightarrow" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/userInfoSetting_userDelete"
+                    android:textSize="16sp"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_setting_rightarrow" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

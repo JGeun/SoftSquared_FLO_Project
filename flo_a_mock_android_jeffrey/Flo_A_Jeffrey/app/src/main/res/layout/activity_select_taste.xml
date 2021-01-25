@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <com.amar.library.ui.StickyScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:stickyHeader="@id/selectTaste_btn_tags"
+            android:padding="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/selectTaste_title"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="32dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/selectTaste_title_msg"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="@color/blackForText"
+                    android:layout_marginTop="5dp"/>
+
+                <LinearLayout
+                    android:id="@+id/selectTaste_btn_tags"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:background="@color/white">
+
+                    <Button
+                        android:layout_width="80dp"
+                        android:layout_height="35dp"
+                        android:text="@string/selectTaste_artist_title"
+                        android:textColor="@color/white"
+                        android:background="@drawable/select_taste_btn_background_after"/>
+
+                    <Button
+                        android:layout_width="70dp"
+                        android:layout_height="35dp"
+                        android:text="@string/selectTaste_chart_title"
+                        android:textColor="@color/lightgray"
+                        android:background="@drawable/select_taste_btn_background_before"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"/>
+
+                    <Button
+                        android:layout_width="80dp"
+                        android:layout_height="35dp"
+                        android:text="@string/selectTaste_genre_title"
+                        android:textColor="@color/lightgray"
+                        android:background="@drawable/select_taste_btn_background_before"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/selectTaste_title1"
+                        android:layout_marginTop="10dp"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/selectTaste_rv_ballad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:paddingEnd="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/selectTaste_title2"
+                        android:layout_marginTop="10dp"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/selectTaste_rv_dance"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_marginTop="15dp"
+                        android:paddingEnd="10dp"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"/>
+            </LinearLayout>
+
+        </com.amar.library.ui.StickyScrollView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:paddingTop="10dp"
+            android:background="@color/white"
+            android:layout_marginBottom="30dp">
+
+            <ImageView
+                android:id="@+id/selectTaste_bottom_iv_scrollUp"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_taste_scroll_up"
+                android:layout_marginStart="20dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/selectTaste_bottom_iv_scrollUp"/>
+
+
+            <Button
+                android:id="@+id/selectTaste_btn_storeUserTaste"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="저장"
+                android:textColor="@color/floForText"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/select_taste_btn_store"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/selectTaste_iv_back"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/ic_text_clear"
+            android:layout_gravity="top|end"/>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

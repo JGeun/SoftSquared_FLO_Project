@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/recommendMusicBackground">
+
+    <LinearLayout
+        android:layout_width="290dp"
+        android:layout_height="220dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/storage_addFolder_title"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="25dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/addFolder_et_listName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="20210115"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textColorHint="@color/lightgray"
+                android:hint="@string/storage_addFolder_hint"
+                android:backgroundTint="@color/black"
+                android:paddingBottom="30dp"/>
+
+            <ImageView
+                android:id="@+id/addFolder_iv_listClear"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/ic_text_clear"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="35dp"
+                android:layout_marginTop="42dp"
+                android:visibility="invisible"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="end"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="25dp">
+
+            <TextView
+                android:id="@+id/addFolder_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/storage_addFolder_cancel"
+                android:textColor="@color/lightgray"
+                android:layout_marginEnd="20dp"/>
+
+            <TextView
+                android:id="@+id/addFolder_OK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/storage_addFolder_ok"
+                android:textColor="@color/floForBtnDisabledTextColor" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

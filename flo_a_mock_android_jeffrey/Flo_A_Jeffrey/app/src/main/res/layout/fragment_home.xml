@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="400dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/home_vp_topPanel"
+                        android:layout_width="match_parent"
+                        android:layout_height="400dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/home_toppanel_selectTaste_after"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/home_toppanel_iv_select_after"
+                            android:layout_width="match_parent"
+                            android:layout_height="400dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/home_toppanel_background_select" />
+
+                        <RelativeLayout
+                            android:id="@+id/home_toppanel_rl_setting"
+                            android:layout_width="120dp"
+                            android:layout_height="150dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginEnd="15dp">
+
+                            <ImageView
+                                android:id="@+id/home_toppanel_iv_setting"
+                                android:layout_width="32dp"
+                                android:layout_height="22dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginTop="14dp"
+                                android:src="@drawable/ic_home_toppanel_setting" />
+
+                            <ImageView
+                                android:id="@+id/home_iv_ticket"
+                                android:layout_width="wrap_content"
+                                android:layout_height="44dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_toStartOf="@id/home_toppanel_iv_setting"
+                                android:src="@drawable/ic_home_toppanel_ticket" />
+                        </RelativeLayout>
+
+
+                        <ImageView
+                            android:id="@+id/home_toppanel_iv_play"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="100dp"
+                            android:layout_marginEnd="25dp"
+                            android:src="@drawable/ic_home_toppanel_play" />
+                    </RelativeLayout>
+                </FrameLayout>
+            </RelativeLayout>
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/browse_tb_flo_chart"
+                android:layout_width="70dp"
+                android:layout_height="10dp"
+                android:layout_gravity="center|bottom"
+                android:layout_marginTop="10dp"
+                app:tabBackground="@drawable/home_toppanel_tab_pager_selector"
+                app:tabGravity="center"
+                app:tabIndicatorHeight="0dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_before1_title"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/ic_home_right"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="종합"
+                        android:textSize="16sp"
+                        android:textColor="@color/floForBtnColor"
+                        android:layout_toStartOf="@id/today_tv_domestic_bar"/>
+
+                    <TextView
+                        android:id="@+id/today_tv_domestic_bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="17dp"
+                        android:text="|"
+                        android:textSize="15sp"
+                        android:layout_marginStart="10dp"
+                        android:layout_toStartOf="@id/today_tv_domestic"/>
+
+                    <TextView
+                        android:id="@+id/today_tv_domestic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="국내"
+                        android:textSize="16sp"
+                        android:layout_marginStart="10dp"
+                        android:layout_toStartOf="@id/today_tv_foreign_bar"/>
+
+                    <TextView
+                        android:id="@+id/today_tv_foreign_bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="17dp"
+                        android:text="|"
+                        android:textSize="15sp"
+                        android:layout_marginStart="10dp"
+                        android:layout_toStartOf="@id/today_tv_foreign"/>
+
+                    <TextView
+                        android:id="@+id/today_tv_foreign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="해외"
+                        android:textSize="16sp"
+                        android:layout_marginStart="10dp"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="center_vertical"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_rv_today"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp" />
+
+            <TextView
+                android:id="@+id/home_tv_recommend1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="@string/home_before2_title"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_rv_original"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:text="@string/home_before3_title"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_rv_cast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:text="@string/home_before4_title"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_rv_genre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:text="@string/home_before5_title"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_rv_video"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:text="@string/home_before6_title"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_rv_audio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="40dp"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/home_before7_title"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="24sp"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="22dp"-->
+<!--                    android:layout_height="22dp"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:src="@drawable/ic_browse_title_right" />-->
+<!--            </LinearLayout>-->
+
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/home_rv_editor"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp" />-->
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/home_iv_ad1"
+                android:layout_marginTop="30dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/home_iv_ad2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/home_social_image"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/home_bottom_company"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"/>
+
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="12dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/home_tv_company_msg" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
